@@ -1,48 +1,56 @@
 {
   "expo": {
     "name": "EventEase",
-    "slug": "EventEase",
+    "slug": "eventease",
+    "owner": "baptisteharbuz",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/EventEase.png",
     "scheme": "eventease",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "description": "Application de gestion d'événements avec authentification sécurisée",
+    "privacy": "public",
+    "splash": {
+      "image": "./assets/EventEase.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ff00ee"
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.eventease.app"
     },
     "android": {
+      "package": "com.eventease.app",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+        "backgroundColor": "#ff00ee",
+        "foregroundImage": "./assets/EventEase.png"
       },
-      "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "edgeToEdgeEnabled": true
     },
     "web": {
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "bundler": "metro"
     },
     "plugins": [
-      "expo-router",
-      [
-        "expo-splash-screen",
-        {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff",
-          "dark": {
-            "backgroundColor": "#000000"
-          }
-        }
-      ]
+      "expo-router"
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "79b2a4d3-dd75-4187-b027-bb53f36ed070"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/79b2a4d3-dd75-4187-b027-bb53f36ed070"
+    },
+    "platforms": ["ios", "android"]
   }
 }
