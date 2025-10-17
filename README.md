@@ -90,3 +90,11 @@ npm install
 npm start
 ```
 
+## Aperçu de l'application
+
+### Vue Liste des événements
+![Liste des événements](assets/EventListScreen.PNG)
+
+### Vue Calendrier
+![Calendrier](assets/CalendarScreen.PNG)
+
