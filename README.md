@@ -98,3 +98,5 @@ npm start
 ### Vue Calendrier
 ![Calendrier](assets/CalendarScreen.PNG)
 
+### Vue Détail
+![Détail](assets/DetailScreen.PNG)
