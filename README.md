@@ -2,6 +2,42 @@
 
 Application mobile React Native de gestion d'événements avec authentification locale, CRUD complet, calendrier, météo et géolocalisation.
 
+## Fonctionnalités
+
+L'application répond entièrement aux besoins du cahier des charges avec des ajouts significatifs pour améliorer l'expérience utilisateur et la sécurité.
+
+### ✅ Fonctionnalités obligatoires (toutes implémentées)
+- **Connexion / Inscription** avec validation complète des données
+- **Liste des événements** avec informations détaillées et filtres
+- **CRUD complet** des événements (Créer, Lire, Modifier, Supprimer)
+- **Marquer un événement comme « participé »** avec persistance
+- **Persistance locale des données** via AsyncStorage avec structure optimisée
+
+### ✅ Fonctionnalités optionnelles (toutes implémentées)
+- **Affichage calendrier** avec vue mensuelle et marqueurs d'événements
+- **Intégration API météo** (Open-Meteo) avec prévisions détaillées
+- **Amélioration graphique** : thème dégradé, icônes vectorielles et splash screen
+- **Géolocalisation** avec calcul automatique des distances et affichage sur carte
+
+### ✅ Ajouts personnels pour plus de sécurité et fluidité
+- **Authentification sécurisée** :
+  - Hashage SHA-256 avec salt personnalisé
+  - Validation stricte des mots de passe (longueur, majuscules, caractères spéciaux)
+  - Protection contre la réutilisation d'emails
+- **Architecture performante** :
+  - Stockage par clés indexées pour optimiser les performances UX
+  - Feature-Based Architecture pour une meilleure maintenabilité
+- **Fonctionnalités sociales** :
+  - Système de likes avec écran dédié aux événements favoris
+  - Gestion des permissions utilisateur (suppression et modification uniquement des événements créés)
+- **Expérience utilisateur avancée** :
+  - Sélection d'images depuis la galerie photo pour illustrer les événements
+  - Navigation fluide avec gestes de swipe et animations
+- **Fonctionnalités de localisation** :
+  - Intégration react-native-maps pour visualisation
+  - Calcul et affichage de la distance en temps réel
+  - Géocodage automatique des adresses
+
 ## Architecture
 
 ```
@@ -19,13 +55,13 @@ src/
 │       └── styles/      # Styles de la feature
 ├── services/
 │   ├── storage/         # Gestion AsyncStorage
-│   └── api/            # Services API externes
+│   └── api/             # Services API externes
 ├── navigation/
 │   ├── flows/          # Flux de navigation (Auth, Main)
 │   └── hooks/          # Hooks de navigation
 ├── contexts/           # Contexts React (état global)
 ├── animations/         # Animations et transitions
-└── config/            # Configuration et variables d'environnement
+└── config/             # Configuration et variables d'environnement
 ```
 
 ## Variables d'environnement
